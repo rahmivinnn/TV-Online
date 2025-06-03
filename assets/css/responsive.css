@@ -1,0 +1,233 @@
+/* TV Global - Enhanced Responsive Styles */
+
+/* Mobile-first approach */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 20px 15px;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        width: 100%;
+        margin: 3px 0;
+    }
+    
+    .quick-actions {
+        flex-direction: column;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        padding: 20px;
+        width: 95%;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .card {
+        padding: 25px;
+    }
+    
+    .btn {
+        padding: 11px 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Large desktop styles */
+@media (min-width: 1025px) {
+    .dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .card {
+        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+    
+    .btn {
+        box-shadow: 0 8px 16px rgba(102, 126, 234, 0.25);
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    .card {
+        background: rgba(52, 73, 94, 0.9);
+        color: #ecf0f1;
+    }
+    
+    .card-title {
+        color: #ecf0f1;
+    }
+    
+    .stat-label {
+        color: #bdc3c7;
+    }
+    
+    .modal-content {
+        background-color: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .form-group input, .form-group select {
+        background: #2c3e50;
+        color: #ecf0f1;
+        border-color: #34495e;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .card {
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+    
+    .btn {
+        display: none;
+    }
+    
+    .modal {
+        display: none;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        margin-bottom: 20px;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+    
+    .card:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .card {
+        transition: none;
+    }
+}
+
+/* Focus styles for accessibility */
+.btn:focus,
+.form-group input:focus,
+.form-group select:focus {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid #000;
+    }
+    
+    .btn {
+        border: 2px solid #000;
+    }
+    
+    .status-indicator {
+        border: 2px solid #000;
+    }
+}

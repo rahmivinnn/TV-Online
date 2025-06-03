@@ -1,0 +1,32 @@
+{
+  "name": "tv-global-server",
+  "version": "1.0.0",
+  "description": "TV Global - Interactive Streaming Platform Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "tv-global",
+    "streaming",
+    "playlist",
+    "tmdb",
+    "vod",
+    "iptv"
+  ],
+  "author": "TV Global Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tv-global/tv-global-server"
+  },
+  "bugs": {
+    "url": "https://github.com/tv-global/tv-global-server/issues"
+  },
+  "homepage": "https://github.com/tv-global/tv-global-server#readme"
+}
