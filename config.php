@@ -20,8 +20,9 @@ $GLOBALS['ENABLE_ADVANCED_CACHING'] = true;
 // Next, go into the HeadlessVidX/Install Instructions.txt and follow the instructions on setting up HeadlessVidX. TheTvApp // which is a Live TV playlist needs to have this installed before it can be used. 
 
 // Replace 'YOUR_API_KEY' with your TMDb API key - https://www.themoviedb.org/
-//Entering your key here may be visible through google drive. Check your sharing settings.
-$apiKey = '';
+// Get your free API key at: https://www.themoviedb.org/settings/api
+// Example: $apiKey = 'a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6';
+$apiKey = 'YOUR_API_KEY_HERE';
 
 // Replace this with your Real-Debrid Private API token - https://real-debrid.com/apitoken
 // Don't worry about this setting if you aren't planning on using Real Debrid.
@@ -47,7 +48,8 @@ $USE_HTTP_PROXY = false;
 //When set to true your playist is created by running the 'create_playlist.php' and 'create_tv_playlist.php'
 //When set to false the the movie and tv show playlist will be loaded from github. The playlists on github 
 //are around 45k movies and around 12k series.
-$userCreatePlaylist = false; // Set to false if you don't want to create any playlist.
+// Set to true to create custom playlists, false to use pre-built playlists
+$userCreatePlaylist = true; // Set to true to generate your own playlists
 
 // Adds approximately 10,000 full-length adult movies to the VOD Movie playlist
 //under the category 'XXX Adult Movies'. This playlist is refreshed every Sunday.

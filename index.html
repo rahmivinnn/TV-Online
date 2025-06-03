@@ -16,99 +16,127 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #141414;
             min-height: 100vh;
-            color: #333;
+            color: #ffffff;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 4%;
         }
 
         .header {
-            text-align: center;
+            text-align: left;
             margin-bottom: 40px;
-            animation: fadeInDown 1s ease-out;
+            background: transparent;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
         }
 
         .logo {
-            font-size: 3rem;
+            font-size: 2.5em;
             font-weight: 700;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #e50914;
             margin-bottom: 10px;
+            letter-spacing: -2px;
         }
 
         .subtitle {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.9);
-            font-weight: 300;
+            font-size: 1.1em;
+            color: #999;
+            margin-bottom: 30px;
+            font-weight: 400;
         }
 
         .dashboard {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
             margin-bottom: 40px;
         }
 
         .card {
-            background: rgba(255,255,255,0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: #1f1f1f;
+            border-radius: 8px;
+            padding: 24px;
+            border: 1px solid #333;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            overflow: hidden;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            transform: translateY(-4px);
+            background: #2a2a2a;
+            border-color: #444;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
         }
 
         .card-header {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .card-icon {
-            font-size: 2rem;
-            margin-right: 15px;
-            color: #667eea;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #e50914, #b20710);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-size: 20px;
+            color: white;
         }
 
         .card-title {
-            font-size: 1.5rem;
+            font-size: 1.2em;
             font-weight: 600;
-            color: #333;
+            color: #ffffff;
+            margin: 0;
         }
 
         .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #e50914;
             color: white;
             border: none;
             padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 500;
+            border-radius: 4px;
             cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            margin: 5px;
+            margin: 4px 8px 4px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            background: #f40612;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
         }
 
         .btn-secondary {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #666;
+        }
+
+        .btn-secondary:hover {
+            background: #333;
+            border-color: #999;
+            transform: translateY(-1px);
         }
 
         .btn-success {
@@ -173,17 +201,18 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            backdrop-filter: blur(5px);
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
         }
 
         .modal-content {
-            background-color: white;
+            background: #1f1f1f;
             margin: 5% auto;
-            padding: 30px;
-            border-radius: 20px;
+            padding: 32px;
+            border-radius: 8px;
             width: 90%;
-            max-width: 600px;
+            max-width: 480px;
+            border: 1px solid #333;
             position: relative;
             animation: slideIn 0.3s ease-out;
         }
@@ -203,27 +232,41 @@
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             font-weight: 500;
+            color: #ffffff;
+            font-size: 14px;
         }
 
         .form-group input, .form-group select {
             width: 100%;
-            padding: 12px;
-            border: 2px solid #e1e5e9;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
+            padding: 12px 16px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            font-size: 14px;
+            background: #2a2a2a;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
         }
 
         .form-group input:focus, .form-group select:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #e50914;
+            background: #333;
+            box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2);
+        }
+
+        .progress-container {
+            background: #333;
+            border-radius: 4px;
+            padding: 2px;
+            margin: 20px 0;
         }
 
         .progress-bar {
@@ -237,7 +280,7 @@
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #e50914, #b20710);
             width: 0%;
             transition: width 0.3s ease;
         }
@@ -287,8 +330,11 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            padding: 15px 20px;
-            border-radius: 10px;
+            background: #1f1f1f;
+            border: 1px solid #333;
+            padding: 16px 20px;
+            border-radius: 6px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
             color: white;
             font-weight: 500;
             z-index: 1001;
@@ -302,10 +348,16 @@
 
         .notification.success {
             background: linear-gradient(135deg, #4CAF50, #45a049);
+            border-left: 3px solid #46d369;
         }
 
         .notification.error {
             background: linear-gradient(135deg, #f44336, #da190b);
+            border-left: 3px solid #e50914;
+        }
+
+        .notification.info {
+            border-left: 3px solid #0071eb;
         }
 
         .loading {
@@ -375,8 +427,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="logo"><i class="fas fa-globe"></i> TV Global</h1>
-            <p class="subtitle">Interactive Streaming Platform - Movies, Series & Live TV</p>
+            <h1 class="logo">TV GLOBAL</h1>
+            <p class="subtitle">Your Personal Netflix-Style Streaming Platform</p>
         </div>
 
         <div class="dashboard">
@@ -391,11 +443,13 @@
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-number" id="movieCount">0</div>
-                            <div class="stat-label">Movies</div>
+                            <div class="stat-label">Movies Available</div>
+                            <div id="movieError" class="error-message" style="display: none; color: #e50914; margin: 10px 0; font-size: 12px;">⚠️ TMDB API Key required to generate movies</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number" id="seriesCount">0</div>
-                            <div class="stat-label">Series</div>
+                            <div class="stat-label">Series Available</div>
+                            <div id="seriesError" class="error-message" style="display: none; color: #e50914; margin: 10px 0; font-size: 12px;">⚠️ TMDB API Key required to generate series</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number" id="channelCount">0</div>
@@ -554,6 +608,110 @@
             }
         }
 
+        // Generate Playlist Function
+        function generatePlaylist(type) {
+            // Check if TMDB API key is configured
+            fetch('api.php?action=config')
+            .then(response => response.json())
+            .then(config => {
+                if (!config.apiKey || config.apiKey === '' || config.apiKey.includes('*')) {
+                    tvGlobal.showNotification('⚠️ TMDB API Key is required! Please configure it in settings.', 'error');
+                    document.getElementById(type === 'movies' ? 'movieError' : 'seriesError').style.display = 'block';
+                    openConfigModal();
+                    return;
+                }
+                
+                // Hide error messages if API key is configured
+                document.getElementById('movieError').style.display = 'none';
+                document.getElementById('seriesError').style.display = 'none';
+                
+                const progressBar = document.getElementById('progressBar');
+                const progressFill = document.getElementById('progressFill');
+                
+                progressBar.style.display = 'block';
+                progressFill.style.width = '0%';
+                
+                tvGlobal.showNotification(`🎬 Starting ${type} generation...`, 'info');
+                
+                fetch('api.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `action=generate&type=${type}`
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        tvGlobal.pollProgress(type);
+                    } else {
+                        tvGlobal.showNotification(data.error || 'Generation failed', 'error');
+                        progressBar.style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    tvGlobal.showNotification('Network error occurred', 'error');
+                    progressBar.style.display = 'none';
+                });
+            })
+            .catch(error => {
+                console.error('Config check error:', error);
+                tvGlobal.showNotification('Unable to check configuration', 'error');
+            });
+        }
+
+        // Refresh Dashboard Function
+        function refreshDashboard() {
+            fetch('api.php?action=status')
+            .then(response => response.json())
+            .then(data => {
+                const statusElement = document.getElementById('serverStatus');
+                const statusTextElement = document.getElementById('serverStatusText');
+                if (data.server === 'online') {
+                    statusElement.className = 'status-indicator status-online';
+                    statusTextElement.textContent = 'Online';
+                } else {
+                    statusElement.className = 'status-indicator status-offline';
+                    statusTextElement.textContent = 'Offline';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching status:', error);
+                const statusElement = document.getElementById('serverStatus');
+                const statusTextElement = document.getElementById('serverStatusText');
+                statusElement.className = 'status-indicator status-offline';
+                statusTextElement.textContent = 'Offline';
+            });
+            
+            fetch('api.php?action=stats')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('movieCount').textContent = data.movies || '0';
+                document.getElementById('seriesCount').textContent = data.series || '0';
+                document.getElementById('channelCount').textContent = data.live || '0';
+            })
+            .catch(error => {
+                console.error('Error fetching stats:', error);
+            });
+            
+            // Check TMDB API configuration
+            fetch('api.php?action=config')
+            .then(response => response.json())
+            .then(config => {
+                if (!config.apiKey || config.apiKey === '' || config.apiKey.includes('*')) {
+                    document.getElementById('movieError').style.display = 'block';
+                    document.getElementById('seriesError').style.display = 'block';
+                } else {
+                    document.getElementById('movieError').style.display = 'none';
+                    document.getElementById('seriesError').style.display = 'none';
+                }
+            })
+            .catch(error => {
+                console.error('Error checking config:', error);
+            });
+        }
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize TV Global system
@@ -567,6 +725,15 @@
                 document.body.classList.toggle('mobile-menu-open');
             };
             document.body.appendChild(mobileToggle);
+            
+            // Initial dashboard refresh
+            refreshDashboard();
+            
+            // Set up form submission
+            document.getElementById('configForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                saveConfig();
+            });
         });
     </script>
 </body>
